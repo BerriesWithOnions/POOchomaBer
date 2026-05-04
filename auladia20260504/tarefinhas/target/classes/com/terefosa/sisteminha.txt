@@ -1,0 +1,9 @@
+Hoje, aula do dia 04 de maio de 2026, fizemos a seguinte tarefa:
+
+"O sistema deve permitir que uma tarefa seja registrada por um usuário do tipo padrão.
+
+terefa
+usuario
+tipoUsuario - enum
+
+O sistema deve permitir que uma tarefa seja removida por um usuario admin

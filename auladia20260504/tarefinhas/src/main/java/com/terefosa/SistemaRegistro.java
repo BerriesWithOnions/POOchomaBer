@@ -28,11 +28,17 @@ public class SistemaRegistro {
         return false;
     }
 
-    public boolean removerTarefa(Tarefa tarefa, Usuario usuario){
-        if (usuario.getTipoUsuario() == TipoUsuario.ADMIN){
-            tarefas.remove(tarefa);
-            return true;
+    public void removeTarefa (Usuario usuario, String tarefa){
+        if(usuario.getTipoUsuario() == TipoUsuario.ADMIN){
+            List<Tarefa> paraRemover = new ArrayList<>();
+            for (Tarefa vaca: this.tarefas){
+                if(tarefa == vaca.getDescricao()){
+                    paraRemover.add(vaca);
+                }
+            }
+            this.tarefas.removeAll(paraRemover);
+            System.out.println("Tarefa removida com sucesso!");
         }
-        return false;
     }
+
 }

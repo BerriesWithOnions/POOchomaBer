@@ -12,7 +12,7 @@ public class TarefaView {
     private Scanner scan;
     private TarefaControle controle;
 
-    public TarefaView(Scanner scan, TarefaControle controle){
+    public TarefaView(){
         this.scan = new Scanner(System.in); // coisa do Java
         this.controle = new TarefaControle();
     }
@@ -59,10 +59,17 @@ public class TarefaView {
         controle.cadastrarTarefa(titulo, descricao);
     }
 
-    private void listaTarefas(){
+    /* private void listaTarefas(){
         List<Tarefa> lista = controle.listaTarefas();
         for (Tarefa t : lista){
             System.out.println(t.toString());
+        }
+    } */
+
+    private void listaTarefas(){
+        List<String> lista = controle.listaTarefasFormatadas();
+        for (String s : lista){
+            System.out.println(s);
         }
     }
 }

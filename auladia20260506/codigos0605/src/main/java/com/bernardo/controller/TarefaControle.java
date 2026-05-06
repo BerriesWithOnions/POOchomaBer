@@ -26,4 +26,12 @@ public class TarefaControle {
         return tarefas;
         // Printar as tarefas é para o usuário, então vai ser função do view, não do controller.
     }
+
+    public List<String> listaTarefasFormatadas() {
+        List<String> listaFormatada = new ArrayList<>();
+        for (Tarefa t : this.tarefas) {
+            listaFormatada.add("Tarefa: " + t.getTitulo() + " - " + t.getDescricao());
+        }
+        return listaFormatada;
+    }
 }

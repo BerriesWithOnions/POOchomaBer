@@ -3,8 +3,6 @@ package com.bernardo.view;
 import java.util.List;
 import java.util.Scanner;
 import com.bernardo.controller.TarefaControle;
-import com.bernardo.model.Tarefa;
-
 public class TarefaView {
     // Não posso importar Tarefa diretamente. Nem mesmo usando import da outra pasta.
 

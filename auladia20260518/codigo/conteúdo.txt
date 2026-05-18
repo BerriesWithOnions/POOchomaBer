@@ -1,0 +1,127 @@
+Conteúdo da matéria
+
+O que vimos até agora:
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Pilares de POO ####################################################################################################################
+-----------------------------------------------------------------------------------------------------------------------------------
+
+-> Abstração
+-> Encapsulamento
+-> Herança
+
+-> Polimorfismo
+    -> Sobrecarga
+    -> Sobrescrita
+
+    acesso e retorno nome (parâmetros, p1, p2)
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+aula de hoje ######################################################################################################################
+-----------------------------------------------------------------------------------------------------------------------------------
+Temos exceções / categorias de erros
+
+Defeitos: 
+-> Interpretação humana
+    Construí e implementei um erro no código, e ele me retornou resultados diferentes do que eu estava esperando
+
+Existem discordâncias no código que não chegam a ser erros, mas sim exceções
+-> Indeterminação matemática (divisão por zero)
+    Não é um erro, mas gera um resultado que não é exato. É uma situação problemática
+    O computador não lida bem com essas sitações problemáticas, então definimos exceções
+
+TRY CATCH -------------------------------------------------------------------------------------------------------------------------
+try -> ocorrência ou fluxo principal
+
+catch -> se der problema eu caio na exceção
+______________________________________
+try {
+    // código que pode gerar erro
+} catch (TipoDaExcecao e) {
+    // tratamento do erro
+}
+______________________________________
+
+FINALLY ---------------------------------------------------------------------------------------------------------------------------
+-> Posso colocar um bloco de código que será executado, ocorra exceção ou não.
+______________________________________
+try {
+    // código
+} catch (TipoDaExcecao e) {
+    // tratamento
+} finally {
+    // sempre executa
+}
+______________________________________
+
+-> Os códigos funcionam sem o finally. Assim como também funcionam sem o try / catch. No entanto essa estrutura serve para 
+organizar o código, e para que nenhuma parte do código esteja solta.
+
+
+THROW -----------------------------------------------------------------------------------------------------------------------------
+-> Quando eu quero colocar alguma exceção direta no código. Quando eu quero manualmente lançar um erro no meio do código.
+
+______________________________________
+public class ExemploThrow {
+    public static void main(String[] args) {
+        int idade = -5;
+
+        if (idade < 0) {
+            throw new IllegalArgumentException("Idade não pode ser negativa.");
+        }
+
+        System.out.println("Idade válida.");
+    }
+}
+______________________________________
+-> Nesse caso, eu não quero que minha variável idade assuma valores negativos. A variável inteira por si só já poderia ser negativa,
+pois assume valor inteiro, então eu preciso tratar ela para que ela assuma valores apenas na faixa que eu definir que eu quero.
+
+
+THROWS ----------------------------------------------------------------------------------------------------------------------------
+
+-> Enquanto com throw eu jogo uma exceção manualmente, com throws eu defino uma condição que pode lançar uma exceção
+
+____________________________________________________________________________
+public class ExemploThrows {
+
+    public static void verificarIdade(int idade) throws Exception {
+
+        if (idade < 18) {
+
+            throw new Exception("Idade insuficiente.");
+
+        }
+
+        System.out.println("Acesso permitido.");
+
+    }
+
+    public static void main(String[] args) {
+
+        try {
+
+            verificarIdade(16);
+
+        } catch (Exception e) {
+
+            System.out.println("Erro: " + e.getMessage());
+
+        }
+
+    }
+
+}
+____________________________________________________________________________
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Coisas que o professor comentou ###################################################################################################
+-----------------------------------------------------------------------------------------------------------------------------------
+-> Professor falou sobre a CloudFLARE
+    - É uma platarforma de hospedagem de serviços que guarda inclusive sistemas da AWS. Diz o professor que teve uma queda dessa
+    plataforma certa vez.
+
+-> Ativar quebra de linha no VSCode
+    [alt + Z]

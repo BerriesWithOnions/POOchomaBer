@@ -1,5 +1,8 @@
+package listas.lista2;
+
 class Carro {
     private String marca;
+
     private String modelo;
     private Motor motor;
 

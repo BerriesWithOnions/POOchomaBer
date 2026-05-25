@@ -1,3 +1,5 @@
+package listas.lista2;
+
 class CPF {
     private String numero;
     private String situacao;
@@ -18,7 +20,7 @@ class CPF {
     }
     public void setSituacao(String situacao) { 
         this.situacao = situacao; 
-    s}
+    }
 
     public void exibirDados() {
         System.out.println("CPF: " + numero + " | Situação: " + situacao);

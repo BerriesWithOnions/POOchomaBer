@@ -1,3 +1,5 @@
+package listas.lista2;
+
 class Pessoa {
     private String nome;
     private int idade;
@@ -10,6 +12,6 @@ class Pessoa {
     }
 
     public void exibirDados() {
-        System.out.println("Nome: " + nome + " | Idade: " + idade);
+        System.out.println("Nome: " + nome + " | CPF: " + cpf + " | Idade: " + idade);
     }
 }

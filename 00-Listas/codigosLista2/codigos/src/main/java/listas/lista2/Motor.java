@@ -1,3 +1,5 @@
+package listas.lista2;
+
 class Motor {
     private String tipo;
     private int potencia;

@@ -1,3 +1,5 @@
+package listas.lista2;
+
 class Carteirinha {
     private String numero;
     private String dataEmissao;
@@ -16,7 +18,6 @@ class Carteirinha {
     public String getDataEmissao() { 
         return dataEmissao; 
     }
-    
     public void setDataEmissao(String dataEmissao) { 
         this.dataEmissao = dataEmissao; 
     }

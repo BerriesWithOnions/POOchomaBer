@@ -1,83 +1,50 @@
   a) O que é herança?
-  -------------------
-  Herança é quando uma classe (subclasse) "herda" os atributos e métodos
-  de outra classe (superclasse). Isso evita repetição de código e cria
-  uma relação do tipo "é um". Por exemplo: Aluno É UMA Pessoa.
-  Em Java, usamos a palavra-chave 'extends':
  
-      class Aluno extends Pessoa { ... }
- 
-  A subclasse pode usar tudo que a superclasse tem (exceto o que é private)
-  e ainda acrescentar seus próprios atributos e métodos.
- 
+ Herança é uma relação entre duas classes, na qual uma classe "é uma" variação da outra, em relação de subordinação.
+ Por exemplo, um Aluno é uma Pessoa (mas nem toda Pessoa é um Aluno), e por isso o aluno tem alguns atributos comuns
+ a todas as pessoas (como exemplo de um código deste projeto, temos o aluno que extends pessoa e via super herda os 
+ atributos nome e idade da superclasse pessoa). O que é Superclasse? Basicamente superclasse é a classe que possui os 
+ atributos que serão herdados pela subclasse.
  
   b) Qual a diferença entre classe base e subclasse?
-  ---------------------------------------------------
-  Classe base (ou superclasse): é a classe "pai", mais genérica.
-  Define os atributos e comportamentos comuns.
-  Exemplo: Pessoa (tem nome e idade)
- 
-  Subclasse: é a classe "filha", mais específica.
-  Herda da classe base e acrescenta suas próprias características.
-  Exemplo: Aluno (herda nome e idade, e adiciona matricula e curso)
+
+Classe base é a superclasse, é a portadora dos atributos que serão herdados pelas suas filhas. ex.: Pessoa.
+Sublcasse é a filha da classe base, é quem herda os atributos. ex.: Aluno.
  
  
   c) O que é um array?
-  ---------------------
-  Array é uma estrutura de dados que armazena um conjunto de elementos
-  do mesmo tipo, com tamanho fixo definido na criação. Cada elemento é
-  acessado por um índice (começando em 0).
- 
-  Exemplo:
-      int[] numeros = new int[5];   // cria array de 5 inteiros
-      numeros[0] = 10;              // acessa a primeira posição
- 
-  O tamanho não pode ser alterado depois que o array é criado.
+
+Array é uma estrutura de dados que armazena informações do mesmo tipo, e que também tem um tamanho fixo predefinido. 
+Poderiamos dizer que um Array é uma lista.
+Usamos índices para nos referir aos elementos da lista. Por exemplo, digamos que eu tenha um Array 
+pessoas[3] = [Leandro, Robson, Ana]
+de pessoas. A pessoas[0] = Leandro, pessoas[1] = Robson e pessoas[2] = Ana.
+
  
  
   d) O que é um ArrayList?
-  -------------------------
-  ArrayList é uma classe da biblioteca do Java (java.util) que funciona
-  como um array dinâmico — o tamanho cresce ou diminui conforme você
-  adiciona ou remove elementos. Ela já vem com vários métodos úteis
-  como .add(), .remove(), .size(), .get(), .contains(), etc.
- 
-  Exemplo:
-      ArrayList<String> nomes = new ArrayList<>();
-      nomes.add("Ana");    // adiciona
-      nomes.remove("Ana"); // remove
-      nomes.size();        // quantidade atual
+
+ArrayList é uma classe de uma biblioteca java (java.util) que funciona como um Array dinâmico (ao invés
+de tamanho predefinido, podemos adicionar ou remover itens do ArrayList). A classe vem com alguns métodos 
+úteis já implementados, como add() - adiciona itens na lista, remove() - remove itens da lista, 
+isEmpty() - retorna se a lista está vazia, get() - retorna o item em um determinado indice da lista, 
+set() - altera o item que está localizado em dada posição da lista.
  
  
   e) Qual a principal diferença entre array e ArrayList?
-  -------------------------------------------------------
-  | Característica     | array             | ArrayList              |
-  |--------------------|-------------------|------------------------|
-  | Tamanho            | Fixo              | Dinâmico               |
-  | Tipo               | Primitivo ou obj. | Só objetos (wrapper)   |
-  | Acesso por índice  | vetor[i]          | lista.get(i)           |
-  | Métodos utilitários| Não tem           | .add, .remove, .size   |
-  | Desempenho         | Levemente mais rápido | Um pouco mais lento |
- 
-  Em resumo: array é mais simples e eficiente, mas rígido.
-  ArrayList é mais flexível e fácil de usar, mas exige um pouco mais.
+
+Array é mais simples, eficiente, porém é mais rígido (não pode ficar mexendo, tem tamanho fixo e precisa ser reescrito)
+    Tamanho fixo, aceita tipos primitivos ou objetos instanciados, o acesso é por indexação (pessoas[1]), não tem métodos utilitários
+    e é mais rápido para ser executado.
+
+
+ArrayList é mais dinâmico, mas é mais exigente e lento para rodar.
+    Tamanho dinâmico, só aceita objetos instanciados, o acesso ao índice é feito pelo método get (pessoas.get(1)), possui métodos
+    utilitários e é mais lento para ser executado.
  
  
   f) Por que uma ArrayList<Pessoa> pode armazenar Aluno e Professor?
-  -------------------------------------------------------------------
-  Porque Aluno e Professor são subclasses de Pessoa — ou seja, eles
-  herdam de Pessoa. Em POO, isso se chama polimorfismo: um objeto
-  do tipo Aluno também pode ser tratado como Pessoa.
  
-  Então quando declaramos ArrayList<Pessoa>, estamos dizendo:
-  "essa lista guarda objetos do tipo Pessoa OU qualquer subclasse dela".
- 
-  Exemplo:
-      ArrayList<Pessoa> lista = new ArrayList<>();
-      lista.add(new Aluno(...));     // funciona! Aluno é Pessoa
-      lista.add(new Professor(...)); // funciona! Professor é Pessoa
- 
- Na hora de exibir, se as subclasses sobrescrevem o método exibir()
- com @Override, o Java vai chamar a versão correta de cada objeto.
- Isso é polimorfismo em ação.
- 
+ Em POO existe um conceito chamado polimorfismo. Basicamente subclasses de alguma superclasse podem ser tratadas como um objeto daquela
+ superclasse. No caso analisado, Aluno e Professor são são subclasses de Pessoa, e portanto podem ser tratados como Pessoa. 
+ Então quando criamos ArrayList<Pessoa>, dizemos para o java que a lista é de objetos Pessoa ou qualquer subclasse de Pessoa. 

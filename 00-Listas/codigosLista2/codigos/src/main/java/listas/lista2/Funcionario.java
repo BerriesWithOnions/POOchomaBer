@@ -13,6 +13,6 @@ public class Funcionario {
 
     public void exibirFuncionario() {
         System.out.println("Funcionário: " + nome + " | Cargo: " + cargo);
-        System.out.println("Crachá: " + cracha.getCodigo() + " | Validade: " + cracha.getDataValidade() + "\n");
+        System.out.println("Crachá: " + cracha.getCodigo() + " | Validade: " + cracha.getDataValidade());
     }
 }

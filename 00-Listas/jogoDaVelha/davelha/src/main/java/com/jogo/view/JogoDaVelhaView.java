@@ -19,7 +19,7 @@ public class JogoDaVelhaView {
     public void iniciar() {
         System.out.println("  -------------------------------  ");
         System.out.println("        JOGO DA VELHA - Java    ");
-        System.out.println("     Professor Choma eu te amo    ");
+        System.out.println("       Para o professor Choma      ");
         System.out.println("  -------------------------------  ");
 
         System.out.print("Nome do Jogador 1 (X): ");

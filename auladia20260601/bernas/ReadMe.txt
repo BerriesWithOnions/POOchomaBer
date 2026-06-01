@@ -1,0 +1,2 @@
+Esse é o primeiro projeto que criamos no springboot. O modelo que criamos no site é o que eu salvei como projeto.png na pasta
+dessa aula. A pasta bernas é o que o site me gerou, e eu baixei o arquivo .zip. A extração é essa pasta a qual eu me refiro.

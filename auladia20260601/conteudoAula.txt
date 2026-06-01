@@ -1,0 +1,83 @@
+CONTEÚDO ANOTADO NA AULA DO DIA 01 DE JUNHO DE 2026
+PROGRAMAÇÃO ORIENTADA À OBJETOS - PROFESSOR JOÃO CHOMA NETO
+
+---------------------------------------- ARQUITETURA EM CAMADAS ----------------------------------------
+
+# 1 - Interface gráfica Desktop (swing)
+# 2 - Aprofundar o conhecimento em algum ambiente. SpringBoot (o mais comum no mercado)
+
+Hoje aprenderemos o que é SpringBoot e logo faremos nosso primeiro projeto.
+
+Algumas aulas atrás estudamos os conceitos MVC (modelo de organização de arquivos em pastas)
+    - Princípio da arquitetura. Se enquadra em vários modelos, em java ou em outras línguas,
+    tanto para o frontend quanto para o backend
+
+Servidor web - banco de dados - tokens
+
+Na arquitetura, usamos o MVC e algumas outras camadas, porque em dado momento o MVC deixou de
+ser suficiente para a quantidade de acesso, dados e fluxos que temos nos dias atuais
+
+MODELO DE REFERÊNCIA OSI (Open Systems Interconnection)
+MODELO TCP/IP
+MODELO CLIENTE/SERVIDOR - Se mistura com o modelo de camadas - dá pra aplicar camadas
+
+CLIENTE/SERVIDOR é via de mão única. Perguntas (requests) são exclusivas do cliente. 
+Respostas são exclusivas do servidor.
+A implementação orientada a objetos se encontra no servidor. 
+
+Arquitetura POO do servidor é feita em java usando o SpringBoot
+
+Servidor - qualquer bom computador que aguente trabalhar sob pressão
+Cliente - qualquer máquina capaz de se conectar à internet
+
+TIPOS DE CLIENTES
+1 - Navegadores web
+2 - Mobile apps
+3 - Clientes de desktop (swing do java)
+4 - Scripts e bots
+
+TIPOS DE SERVIDORES
+1 - servidores web (Apache, Nginx)
+2 - servidores de aplicação (Tomcat, Node.js)
+3 - servidores de banco de dados (MySQL, MongoDB (não -relacionais))
+4 - servidores de e-mail (Exchange, Postfix) - SNTP (protocolo de e-mails)
+
+
+Cliente - servidor -> protocolo http -> conversa via navegador
+Em HTTP temos verbos de conversa
+GET -> modo leitura (igual ao código em java). É quando damos um enter em uma URL ou 
+    em alguma pesquisa em um navegador.
+POST
+PUT
+DELETE
+
+SpringBoot -> é um FRAMEWORK
+Quando estamos usando java, se queriamos ler algo do terminal, usávamos o io (assim como em python). São
+comandos pré-programados. São bibliotecas
+Framework - é como uma caixa de ferramentas. Usamos uma caixa com as ferramentas que aprendemos a usar. Agora que
+sabemos java, usaremos o SpringBoot. Ao invés de usar uma chave de fenda, usaremos uma parafusadeira. Usamos só
+a lógica e a OO. Framework oferece uma linha de aprendizagem mais bem desenvolvida. 
+
+Link do SpringBoot: https://spring.io/projects/spring-boot
+
+# Gerenciadores de dependências:
+Ferramentas de automação de build (construção) e gerenciamento de dependências para Java
+Gradle - Groovi
+Gradle - Kotlin
+Maven - nativo do java
+
+Snapshot - executáveis gerados pela compilação que são depositados em um repositório
+A versão mais estável sempre será sugerida pela própria plataforma.
+
+java 17 - primeira versão do java que compila SpringBoot
+depois dela, todas as versões compilam SpringBoot
+
+Com o SpringBoot já dá pra fazer um sistema web para vender.
+
+RESTful - interface de programação, sem interface gráfica, que se comunica via protocolo http, que consegue
+comunicar via servidor com a aplicação que eu estou fazendo. Todos os códigos que eu tenho de POO eu consigo colocar
+no SpringBoot e publicar na web.
+
+Todo o projeto principal no SpringBoot fica em test.
+Mas por que o target não está aí? Porque projetos java quebram muito fácil.
+Depois de rodar o código de java.com.wo.bernas o target apareceu.

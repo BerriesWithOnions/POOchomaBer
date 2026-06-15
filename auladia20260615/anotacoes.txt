@@ -1,0 +1,31 @@
+AULA DE POO
+DIA 15 DE JUNHO DE 2026
+
+_______________________________________________________________________________________________________________________________________
+@autowired
+-> No framework Spring, usameos autowired para instanciar objetos automaticamente. Eu não preciso usar new para cada objeto que eu 
+criar. Com autowired, eu só informo o spring que vou criar um novo objeto e ele é instanciado automaticamente. Eu crio DEPENDENCIAS
+e NÃO OBJETOS REAIS.
+
+h2 - Banco de dados de testes
+Adicionamos diferentes dependências na criação do nosso spring nessa aula. O banco de dados h2 foi um deles.
+
+Além disso, aparte do CMS que já usávamos (separação em camadas / pastas), vamos criar mais uma camada para mexer com banco de dados - 
+o DAO (Data Access Object). Vamos chamar de repository, porque vai ser o lugar onde vamos armazenar os dados. 
+-> Vamos adicionar operações no Repository. Não instanciamos nada, apenas implementamos.
+
+Por padrão a porta 8080 é usada para rodar as aplicações. 
+
+Rodamos o banco de dados e ele está na porta 8080
+
+O spring conecta o banco de dados e garante que tudo ali funcione. Sem o FW Spring teríamos que fazer essa conexão na mão
+
+Model - classes
+Repository - Service - conecta com o banco de dados
+
+_______________________________________________________________________________________________________________________________________
+
+VERSIONAMENTO E COMITAR
+Quando temos um programa que está estável, que compila normalmente, temos que fazer o commit
+_______________________________________________________________________________________________________________________________________
+

@@ -1,0 +1,23 @@
+AULA DE PROGRAMAÇÃO ORIENTADA A OBJETOS
+DIA 17 DE JUNHO DE 2026
+
+__________________________________________________________________________________________________________________________________
+
+Trabalhamos com a separação das classes em camadas: 
+    1) controller
+    2) model
+    3) repository
+    4) service
+
+Relacionamento - dependência de um tipo com outro (B depende de A se em B existe um atributo do tipo A)
+POO existe em um mundo, os dados em outro. Dependência é relacionar os dois.
+Repository é o que faz essa comunicação dos tipos com os dados.
+
+COMO IMPLEMENTAR coisas em Java que JÁ EXISTEM -> usando herança (extends)
+
+@RequestMapping -> Tem pedido aí, servidor?
+@RequestBody -> Toma um pedido aí, servidor!
+JSON -> Objeto em Java - é a forma mais fácil de comunicar objetos com o sistema
+
+Professor disse que os conteúdo da aula de hoje são muito importantes e que provavelmente usaremos eles para o resto da nossa
+carreira. Realmente, pela minha experiência, eu ouço muito em falar de CRUD.

@@ -1,0 +1,4 @@
+Tivemos duas atividades de jogo da velha. Nessa pasta se encontra o jogo da velha usando o Spring Boot, e no outro
+diretório (jogoDaVelha) se encontra o jogo implementado em java com retornos do jogo com prints direto no terminal.
+Não esgotei as jogadas que poderia criar com o Bruno por falta de tempo, mas fiz algumas para testas. Estão no 
+subdiretório JogoVelha, dentro desse projeto. 

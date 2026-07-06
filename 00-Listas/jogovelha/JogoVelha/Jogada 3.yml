@@ -1,0 +1,25 @@
+info:
+  name: Jogada 3
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/partidas/1/jogadas?simbolo=X&linha=2&coluna=2
+  params:
+    - name: simbolo
+      value: X
+      type: query
+    - name: linha
+      value: "2"
+      type: query
+    - name: coluna
+      value: "2"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

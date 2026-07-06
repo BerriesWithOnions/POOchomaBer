@@ -1,0 +1,25 @@
+info:
+  name: Jogada 4
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/partidas/1/jogadas?simbolo=O&linha=1&coluna=0
+  params:
+    - name: simbolo
+      value: O
+      type: query
+    - name: linha
+      value: "1"
+      type: query
+    - name: coluna
+      value: "0"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

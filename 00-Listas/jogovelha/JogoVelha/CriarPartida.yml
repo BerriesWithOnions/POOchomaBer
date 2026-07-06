@@ -1,0 +1,22 @@
+info:
+  name: CriarPartida
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/partidas?nomeJogadorX=Ana&nomeJogadorO=Bruno
+  params:
+    - name: nomeJogadorX
+      value: Ana
+      type: query
+    - name: nomeJogadorO
+      value: Bruno
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
